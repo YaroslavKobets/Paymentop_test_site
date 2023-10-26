@@ -1,0 +1,82 @@
+body {
+	overflow-x: hidden;
+	max-width: 1920px;
+}
+.main {
+	flex: 1 1 auto;
+	justify-content: center;
+}
+.wrapper {
+	max-width: $maxWidthWrapper + px;
+	min-width: $minWidthWrapper + px;
+	min-height: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+
+	> main {
+		flex: 1 1 auto;
+	}
+}
+
+.container {
+	max-width: $containerWidth + px;
+	padding: 0 $containerSidePadding + px;
+	margin: 0 auto;
+
+	@media (max-width: $breakpoint576) {
+		max-width: none;
+		padding: 0 15px;
+	}
+}
+.vhidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	border-style: none;
+}
+
+.section-title {
+	@include adaptiveValue('font-size', 56, 32);
+
+	font-weight: 700;
+	line-height: 1;
+	color: $grey-1000;
+}
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-radius: 6px;
+	font-size: 13px;
+	line-height: calc(20 / 13 * 100%);
+	font-weight: 700;
+	padding: 8px 16px;
+	min-width: 99px;
+	transition: all 0.3s ease-in-out;
+	&_blue {
+		background-color: $blue;
+		color: #fff;
+	}
+	&_white {
+		background-color: #fff;
+		color: $blue;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}

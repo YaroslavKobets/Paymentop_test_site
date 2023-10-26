@@ -1,0 +1,26 @@
+.wantToTry {
+	@include adaptiveValue('padding-block', 71, 30);
+	@include adaptiveValue('margin-top', 120, 60);
+
+	position: relative;
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		z-index: -1;
+		width: 1000%;
+		height: 100%;
+		left: -400%;
+		top: 0;
+		background-color: $blue;
+	}
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+	}
+	&__title {
+		color: #fff;
+	}
+}

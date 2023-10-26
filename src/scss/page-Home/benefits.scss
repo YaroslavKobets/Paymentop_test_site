@@ -1,0 +1,57 @@
+.benefits {
+	margin-top: -115px;
+	&__body {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 40px;
+		@include screen-480 {
+			gap: 20px;
+		}
+	}
+}
+.card-benefits {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px 10px;
+	width: 100%;
+	background-color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	@media (min-width: $breakpoint480) {
+		@include adaptiveValue('max-width', 260, 200);
+	}
+	&__icon {
+		width: 98px;
+		height: 98px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		img {
+			width: 58px;
+			height: 58px;
+			object-fit: contain;
+		}
+	}
+
+	&__title {
+		font-size: 22px;
+		font-weight: 700;
+		line-height: calc(32 / 22 * 100%);
+		color: $grey-800;
+		margin-top: 20px;
+	}
+
+	&__text {
+		margin-top: 15px;
+		font-size: 16px;
+		line-height: 1.5;
+		min-height: calc((16 * 1.5) * 3) + px;
+		@include screen-576 {
+			min-height: auto;
+		}
+	}
+}

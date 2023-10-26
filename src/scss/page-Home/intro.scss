@@ -1,0 +1,67 @@
+.intro {
+	padding-bottom: 115px;
+	position: relative;
+	&::before {
+		content: '';
+		display: block;
+		width: 1000%;
+		height: 100%;
+		background-color: #f8fafb;
+		position: absolute;
+		top: 0;
+		left: -400%;
+		z-index: -1;
+	}
+	&__container {
+		@include adaptiveValue('padding-top', 115, 25);
+		@include adaptiveValue('padding-bottom', 140, 30);
+	}
+
+	&__body {
+		@include adaptiveValue('padding-block', 65, 0);
+		position: relative;
+	}
+
+	&__content {
+		max-width: calc(590 / 1160 * 100%);
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 15px;
+		@include screen-992 {
+			max-width: 420px;
+		}
+		@include screen-768 {
+			max-width: 100%;
+		}
+	}
+
+	&__suptitle {
+		border-radius: 53px;
+		background-color: #fff;
+		padding: 8px 16px;
+		font-size: 13px;
+		line-height: 1.53;
+		font-weight: 700;
+	}
+
+	&__title {
+		color: $grey-900;
+	}
+
+	&__bg {
+		position: absolute;
+		right: calc(-328 / 1160 * 100%);
+		bottom: 0;
+		display: block;
+		width: 100%;
+		max-width: calc(789 / 1160 * 100%);
+		height: auto;
+		@include screen-768 {
+			position: relative;
+			right: 0;
+			max-width: 100%;
+			margin-top: 15px;
+		}
+	}
+}
