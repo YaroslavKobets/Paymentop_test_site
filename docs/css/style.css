@@ -546,6 +546,10 @@ img {
 }
 
 @media (max-width: 991.98px) {
+  .wrapper {
+    overflow-x: hidden;
+  }
+
   .intro__content {
     max-width: 420px;
   }
