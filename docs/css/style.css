@@ -36,8 +36,7 @@ a:active {
 
 html,
 body {
-  width: 99.999%;
-  height: 100%;
+  width: 100%;
   min-width: 320px;
 }
 
@@ -53,6 +52,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #fff;
+  overflow-x: hidden;
 }
 
 aside,
@@ -101,11 +101,6 @@ h5,
 h6 {
   font-weight: inherit;
   font-size: inherit;
-}
-
-body {
-  overflow-x: hidden;
-  max-width: 1920px;
 }
 
 .main {
@@ -207,12 +202,12 @@ img {
 .intro::before {
   content: "";
   display: block;
-  width: 1000%;
+  width: 100%;
   height: 100%;
   background-color: #f8fafb;
   position: absolute;
   top: 0;
-  left: -400%;
+  left: 0;
   z-index: -1;
 }
 
@@ -423,9 +418,9 @@ img {
   display: block;
   position: absolute;
   z-index: -1;
-  width: 1000%;
+  width: 100%;
   height: 100%;
-  left: -400%;
+  left: 0;
   top: 0;
   background-color: #00a1ff;
 }

@@ -17,8 +17,7 @@ a:active {
 
 html,
 body {
-	width: 99.999%;
-	height: 100%;
+	width: 100%;
 	min-width: $minWidthWrapper + px;
 }
 body {
@@ -33,6 +32,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background: $color-bg;
+	overflow-x: hidden;
 }
 aside,
 nav,
